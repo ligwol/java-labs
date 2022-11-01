@@ -1,8 +1,8 @@
 package lab1;
     public class lab1 {
         public static boolean containsDigitAInHexadecimalRepresentation(int number) {
-            String param = Integer.toOctalString(number);
-            int i= param.indexOf('A');
+            String param = Integer.toHexString(number);
+            int i= param.indexOf('a');
             if(i== -1){
                 System.out.println(param); 
                 return false;
@@ -13,8 +13,7 @@ package lab1;
             }
         }
     public static void main(String[] args) {
-        lab1.containsDigitAInHexadecimalRepresentation(25);
-        System.out.println("Hello, World!"); 
+        lab1.containsDigitAInHexadecimalRepresentation(10);
     }
     
 }
