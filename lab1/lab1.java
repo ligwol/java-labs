@@ -1,19 +1,20 @@
 package lab1;
-    public class lab1 {
-        public static boolean containsDigitAInHexadecimalRepresentation(int number) {
-            String param = Integer.toHexString(number);
-            int i= param.indexOf('a');
-            if(i== -1){
-                System.out.println(param); 
-                return false;
-            }
-            else{
-                System.out.println("true"); 
-                return true;
-            }
-        }
+import java.util.Random;
+
+public class lab1 {
     public static void main(String[] args) {
-        lab1.containsDigitAInHexadecimalRepresentation(10);
+        Problem1.containsDigitAInHexadecimalRepresentation(10);
+        Random rd = new Random();
+        int[] param;
+        param = new int[10];
+        for (int i=0; i<10; i++){
+            param[i] = rd.nextInt(100);
+        }
+        Problem2.segregateEvenAndOddNumbers(param);
+        //Problem2.segregateEvenAndOddNumbers();
     }
-    
+
 }
+
+
+
