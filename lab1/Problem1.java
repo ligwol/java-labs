@@ -5,7 +5,7 @@ public class Problem1{
         String param = Integer.toHexString(number);
         int i= param.indexOf('a');
         if(i== -1){
-            System.out.println(param); 
+            System.out.println("false"); 
             return false;
         }
         else{
