@@ -1,4 +1,8 @@
 package lab1;
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.util.Locale;
+import java.util.Arrays;
 
 public class Problem5 {
 
@@ -23,8 +27,30 @@ public class Problem5 {
      * Выход: false
      */
     public static boolean isGeometricProgression(String numbers) {
-        // TODO: implement this method
-        return false;
+        String[] string = numbers.split(",");
+        int[] arr = new int[string.length];
+        for (int i = 0; i < string.length; i++) {
+            arr[i] = Integer.valueOf(string[i]);
+        }
+        System.out.print("Array : "+ Arrays.toString(arr)+'\n');
+
+        Arrays.sort(arr);
+
+        double q=arr[1]/arr[0];
+        if(arr[0]==0||arr.length<=2){
+            System.out.println("false, put in more numbers");
+            return false;
+        }
+        else{
+            if(((arr[1]*q*2)/2)==arr[2]){
+                System.out.println("true");
+                return true;
+            }
+            else {
+                System.out.println("false");
+                return false;
+            }
+        }
     }
 
 }
